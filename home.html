@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PawHeat — Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- top navigation -->
+  <header class="topnav">
+    <div class="brand">
+      <div class="logo-mark">🐾</div>
+      <div class="brand-text">PawHeat</div>
+    </div>
+    <nav class="nav">
+      <a href="#shelters">Shelters</a>
+      <a href="#report-cta">Report</a>
+      <a href="#contribute-cta">Contribute</a>
+      <a href="#stories">Stories</a>
+    </nav>
+    <button class="menu-toggle" aria-label="toggle menu">☰</button>
+  </header>
+
+  <!-- compact hero -->
+  <section class="hero-compact">
+    <div class="container">
+      <h1>Helping stray animals — one safe shelter at a time</h1>
+      <p class="lead">Find shelters, report problems, donate items or money, and read short stories of hope.</p>
+    </div>
+  </section>
+
+  <!-- Dynamic content area -->
+  <main class="container main-grid">
+    <section id="dynamicPanel" class="card-section" aria-live="polite">
+      <div class="section-header">
+        <h2 class="muted" style="font-weight:700; font-size:1.05rem">Select an option above to view details</h2>
+        <p class="muted" style="margin-top:6px">Click "Shelters", "Report", "Contribute" or "Stories" in the top navigation to show that content here.</p>
+      </div>
+      <div id="dynamicContent"></div>
+    </section>
+
+    <!-- Original sections (hidden by JS to avoid duplication) -->
+    <section id="shelters" class="card-section"></section>
+    <section id="report-cta" class="card-section"></section>
+
+    <!-- ✅ Contribute section updated with Money form -->
+    <section id="contribute-cta" class="card-section">
+      <h2>Contribute</h2>
+      <p>Support stray animals by donating money, food, or fabric.</p>
+
+      <!-- Money Contribution Form -->
+      <div class="contribute-tab" id="moneyTab">
+        <h3>💰 Money Contribution</h3>
+        <form id="moneyForm">
+  <label for="donorName">Name:</label>
+  <input type="text" id="donorName" required>
+
+  <label for="donationAmount">Amount (₹):</label>
+  <input type="number" id="donationAmount" required>
+
+  <label for="upiId">UPI ID:</label>
+  <input type="text" id="upiId" required>
+
+  <button type="submit">Donate</button>
+</form>
+
+<div id="moneyResult"></div>
+
+      </div>
+    </section>
+
+    <section id="stories" class="card-section"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>PawHeat</strong> — ISS 2025
+        <div class="muted">Contact: <a href="mailto:tripurassc@gmail.com">tripurassc@gmail.com</a></div>
+        <div class="muted">Contact: <a href="mailto:786shaikthaslim@gmail.com">786shaikthaslim@gmail.com</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- External scripts -->
+  <script src="js/script.js"></script>
+  <script src="js/contribute.js"></script>
+</body>
+</html>
